@@ -18,6 +18,7 @@ public class ReTweaks {
     private static final Logger LOGGER = LogUtils.getLogger();
     public ReTweaks() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ReTweaksConfig.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ReTweaksClientConfig.SPEC);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

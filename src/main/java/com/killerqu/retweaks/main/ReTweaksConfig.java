@@ -10,7 +10,7 @@ public class ReTweaksConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SLEEP;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HUNGER;
     static {
-        BUILDER.push("Re: Tweaks config");
+        BUILDER.push("Re:Tweaks config");
 
         ENABLE_NETHER_PORTALS = BUILDER.comment("If false, you will not be able to ignite portal frames.")
                         .define("Enable Nether Portals", true);
