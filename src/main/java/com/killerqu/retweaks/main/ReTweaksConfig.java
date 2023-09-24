@@ -8,6 +8,7 @@ public class ReTweaksConfig {
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_NETHER_PORTALS;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SLEEP;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HUNGER;
     static {
         BUILDER.push("Re: Tweaks config");
 
@@ -15,6 +16,8 @@ public class ReTweaksConfig {
                         .define("Enable Nether Portals", true);
         ENABLE_SLEEP = BUILDER.comment("If false, player cannot sleep. Setting respawn point will still work.")
                         .define("Enable Sleep", true);
+        ENABLE_HUNGER = BUILDER.comment("If false, player always has max hunger and saturation. Warning: this will make natural regeneration pretty OP.")
+                        .define("Enable Hunger", true);
 
         BUILDER.pop();
         SPEC = BUILDER.build();
