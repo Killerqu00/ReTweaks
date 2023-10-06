@@ -5,10 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "ReTweaks.refmap.json",
   "mixins": [
-    "FoodDataMixin",
-    "ForgeIngameGuiMixin"
   ],
   "client": [
+    "ForgeIngameGuiMixin"
   ],
   "injectors": {
     "defaultRequire": 1
