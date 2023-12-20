@@ -11,7 +11,9 @@ public class ReTweaksConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_NETHER_PORTALS;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_SLEEP;
     public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_HUNGER;
+    public static final ForgeConfigSpec.ConfigValue<Integer> CONSTANT_HUNGER_VALUE;
     public static final ForgeConfigSpec.ConfigValue<List<? extends String>> WORLD_JOIN_COMMANDS;
+
     static {
         BUILDER.push("Re:Tweaks config");
 
@@ -21,8 +23,10 @@ public class ReTweaksConfig {
                         .define("Enable Sleep", true);
         ENABLE_HUNGER = BUILDER.comment("If false, player always has max hunger and saturation. Warning: this will make natural regeneration pretty OP.")
                         .define("Enable Hunger", true);
+        CONSTANT_HUNGER_VALUE = BUILDER.comment("If hunger was disabled, this amount will be used as your hunger value.")
+                        .define("Constant Hunger Value", 18);
         WORLD_JOIN_COMMANDS = BUILDER.comment("List of commands to execute on world join.")
-                        .defineListAllowEmpty("commands", List.of(), o -> true);
+                        .defineListAllowEmpty(List.of("commands"), List::of, o -> true);
 
         BUILDER.pop();
         SPEC = BUILDER.build();

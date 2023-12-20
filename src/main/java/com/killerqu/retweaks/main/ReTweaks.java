@@ -32,14 +32,4 @@ public class ReTweaks {
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Server setup done!");
     }
-
-//    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-//    public static class ClientModEvents {
-//
-//        @SubscribeEvent
-//        public static void onClientSetup(FMLClientSetupEvent event)
-//        {
-//            LOGGER.info("Client setup done!");
-//        }
-//    }
 }

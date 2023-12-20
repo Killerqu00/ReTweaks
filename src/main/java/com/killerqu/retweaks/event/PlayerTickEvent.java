@@ -11,7 +11,7 @@ public class PlayerTickEvent {
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (!ReTweaksConfig.ENABLE_HUNGER.get()) {
-            event.player.getFoodData().setFoodLevel(20);
+            event.player.getFoodData().setFoodLevel(ReTweaksConfig.CONSTANT_HUNGER_VALUE.get());
             event.player.getFoodData().setSaturation(20f);
         }
     }
